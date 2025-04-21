@@ -54,7 +54,7 @@
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/您的用户名/resume-generator.git
+   git clone https://github.com/Abyxs/resume-generator.git
    cd resume-generator
    ```
 
