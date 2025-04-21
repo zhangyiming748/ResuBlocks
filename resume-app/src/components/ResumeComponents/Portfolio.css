@@ -1,0 +1,97 @@
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  position: relative;
+}
+
+.portfolio-item {
+  display: block !important; /* 覆盖flex布局 */
+  position: relative;
+  height: auto !important; /* 初始高度 */
+  min-height: 0 !important;
+  max-height: none !important;
+}
+
+/* 修改图片容器定位方式 */
+.portfolio-image-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  height: 120px !important;
+  width: 100%; /* 新增宽度限制 */
+  pointer-events: none; /* 防止干扰点击事件 */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 重构项目项容器 */
+.portfolio-item {
+  position: relative;
+  margin-top: 140px !important; /* 图片高度+20px间距 */
+  padding-top: 0 !important;
+  min-height: calc(100% - 140px) !important; /* 确保内容框最小高度 */
+}
+
+/* 新增内容容器样式 */
+.portfolio-content {
+  position: relative;
+  z-index: 1;
+  margin-top: 140px !important; /* 与图片区域完全分离 */
+  padding: var(--item-padding) !important; /* 使用CSS变量 */
+  height: auto !important;
+}
+
+.portfolio-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 移除所有可能影响高度的CSS类样式 */
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box !important;
+  /* 移除可能影响高度的样式 */
+  min-height: initial !important;
+  max-height: none !important;
+  /* 确保内容不会溢出 */
+  overflow: auto !important;
+  /* 新增安全限制 */
+  padding: clamp(5px, var(--item-padding), 100px) !important;
+}
+
+/* 覆盖任何可能的全局样式 */
+.portfolio-content * {
+  box-sizing: border-box;
+}
+
+.portfolio-title {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.portfolio-description {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  flex: 1;
+}
+
+.portfolio-link {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+/* 添加全局样式覆盖 */
+#root .portfolio-content {
+  height: attr(data-height) !important;
+}

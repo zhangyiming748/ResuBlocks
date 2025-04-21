@@ -1,0 +1,29 @@
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.image-item {
+  margin-bottom: 20px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  transition: transform 0.3s ease;
+}
+
+.image-title {
+  margin: 10px 0 5px 0;
+  font-weight: bold;
+}
+
+.image-description {
+  margin: 0;
+  color: #666;
+  line-height: 1.4;
+}
