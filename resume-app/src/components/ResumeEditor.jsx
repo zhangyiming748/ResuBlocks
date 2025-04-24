@@ -18,10 +18,10 @@ const initialResumeSettings = {
   fontFamily: "'Noto Sans SC', sans-serif",
   layout: 'standard',
   margins: {
-    top: 15,
-    right: 15,
-    bottom: 15,
-    left: 15
+    top: 5,
+    right: 5,
+    bottom: 5,
+    left: 5
   }
 };
 
@@ -32,10 +32,10 @@ const createDefaultPage = (settings = {}) => ({
   height: 297, // 默认 A4 高度（mm）
   orientation: 'portrait',
   margins: {
-    top: 15,
-    right: 15,
-    bottom: 15,
-    left: 15
+    top: 5,
+    right: 5,
+    bottom: 5,
+    left: 5
   },
   backgroundColor: '#ffffff',
   components: [], // 页面中的组件

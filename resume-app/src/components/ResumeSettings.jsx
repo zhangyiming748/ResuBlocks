@@ -204,32 +204,7 @@ const ResumeSettings = ({
             <div>
               <h3>页面设置</h3>
               
-              <div style={{ 
-                display: 'flex', 
-                justifyContent: 'flex-end', 
-                marginBottom: '10px'
-              }}>
-                <button
-                  onClick={() => addPage()}
-                  style={{
-                    padding: '6px 12px',
-                    backgroundColor: '#4CAF50',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    fontSize: '13px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '5px'
-                  }}
-                >
-                  <Plus size={16} />
-                  添加相同页面
-                </button>
-              </div>
-
-                <div style={{ marginBottom: '15px' }}>
+              <div style={{ marginBottom: '15px' }}>
                 <label style={{ display: 'block', marginBottom: '5px' }}>页面尺寸</label>
                   <select 
                   value={Object.entries(pageSizePresets).find(([key, size]) => 
