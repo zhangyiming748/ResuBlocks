@@ -7,7 +7,9 @@ RUN npm install
 WORKDIR /app/resume-app
 RUN npm install
 EXPOSE 5173
-ENTRYPOINT ["npm","run","dev"]
+# ENTRYPOINT ["npm","run","dev"]
+ENTRYPOINT ["npm","run","dev","--","--host"]
+
 # 或
 # yarn dev
 # docker run -it --rm --name test -v /Users/zen/github/ResuBlocks:/app -p 5173:5173 node:18-alpine ash
