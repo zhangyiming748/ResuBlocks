@@ -1,0 +1,7 @@
+services:
+  resume:
+    image: zhangyiming748/resublocks:latest
+    container_name: resume
+    ports:
+      - "5173:5173"
+    restart: unless-stopped

@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.21
+FROM node:18-alpine
 WORKDIR /app
 COPY . .
 # 主项目依赖
@@ -10,3 +10,4 @@ EXPOSE 5173
 ENTRYPOINT ["npm","run","dev"]
 # 或
 # yarn dev
+# docker run -it --rm --name test -v /Users/zen/github/ResuBlocks:/app -p 5173:5173 node:18-alpine ash
